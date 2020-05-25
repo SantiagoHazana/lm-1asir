@@ -70,15 +70,18 @@
 
                 <label>Grupo</label>
                 <input type="text" name="grupo">
+                <input type="button" value="?" onclick="alert('Debe ingresar el nombre de un grupo')">
+                <span id="e1"></span>
                 <br><br>
 
                 <label>Titulo del Album</label>
                 <textarea name="titulo" cols="30" rows="10" onkeypress="return limitCharacters(titulo.value, 50)"></textarea>
+                <input type="button" value="?" onclick="alert('Debe ingrear un titulo')">
+                <span id="e2"></span>
                 <br><br>
 
                 <input type="button" value="Agregar" onclick="agregarAlbum(grupo.value, titulo.value)">
                 <input type="reset" value="Borrar">
-                <p id="check"></p>
             </fieldset>
         </form>
 
