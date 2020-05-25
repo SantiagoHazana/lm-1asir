@@ -64,9 +64,11 @@ function agregarAlbum(grupo, titulo) {
     if (grupo.length == 0) {
         showMessage('e1', 'Por favor ingrese el grupo');
         showMessage('e2', '');
+        document.getElementById('grupo').focus();
     } else if (titulo.length == 0) {
         showMessage('e2', 'Por favor ingrese el titulo');
         showMessage('e1', '');
+        document.getElementById('titulo').focus();
     } else {
         albumCount++;
         showMessage('e1', '');

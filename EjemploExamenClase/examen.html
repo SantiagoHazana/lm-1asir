@@ -69,13 +69,13 @@
                 <p>Introduza el grupo y titulo del album para agregarlo a su lista de coleccion.</p>
 
                 <label>Grupo</label>
-                <input type="text" name="grupo">
+                <input type="text" name="grupo" id="grupo">
                 <input type="button" value="?" onclick="alert('Debe ingresar el nombre de un grupo')">
                 <span id="e1"></span>
                 <br><br>
 
                 <label>Titulo del Album</label>
-                <textarea name="titulo" cols="30" rows="10" onkeypress="return limitCharacters(titulo.value, 50)"></textarea>
+                <textarea name="titulo" id="titulo" cols="30" rows="10" onkeypress="return limitCharacters(titulo.value, 50)"></textarea>
                 <input type="button" value="?" onclick="alert('Debe ingrear un titulo')">
                 <span id="e2"></span>
                 <br><br>
