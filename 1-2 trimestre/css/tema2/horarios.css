@@ -1,0 +1,55 @@
+body {
+    background: url(../../images/instituto.jpg) center no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 30%;
+}
+
+table {
+    border: solid 1px;
+    text-align: center;
+    table-layout: fixed;
+    width: 50%;
+    margin: auto;
+    background-color: lightgrey;
+}
+
+td {
+    border: solid 1px;
+    text-align: center;
+}
+
+th {
+    border: solid 1px;
+    text-align: center;
+}
+
+.par {
+    background-color: aquamarine;
+}
+
+.iso {
+    background-color: blueviolet;
+}
+
+.lm {
+    background-color: burlywood;
+}
+
+.gbd {
+    background-color: chartreuse;
+}
+
+.fol {
+    background-color: dodgerblue;
+}
+
+.fuh {
+    background-color: rgb(223, 112, 223);
+}
+
+.recreo {
+    background-color: black;
+    color: white;
+}

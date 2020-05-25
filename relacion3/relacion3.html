@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="relacion3.css">
+    <title>Relacion 3 - Funciones</title>
+</head>
+<body>
+    <div id="content">
+
+        <h1>Relacion 3 - Funciones</h1>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 1</legend>
+
+                <p>Escribe una función llamada potencia que reciba dos argumentos y devuelva como
+                    resultado la potencia del primer número elevado al segundo.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+
+                <label>Potencia</label>
+                <input type="number" name="n2" value="2">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r1').innerHTML = n1.value + '^' + n2.value + ' = ' + potencia(parseInt(n1.value), parseInt(n2.value));
+                ">
+
+                <p id="r1"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 2</legend>
+
+                <p>Escribe una función llamada par que devuelva true si el número recibido es par y
+                    false si es impar.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+
+                <input type="button" value="Comprobar" onclick="
+                    if(par(parseInt(n1.value)))
+                        document.getElementById('r2').innerHTML = 'Es un numero par';
+                    else
+                        document.getElementById('r2').innerHTML = 'No es un numero par';
+                ">
+
+                <p id="r2"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 3</legend>
+
+                <p>Escribe una función llamada sueldo que reciba tres argumentos y calcule el sueldo
+                    del mes de un empleado a partir del número de horas trabajadas, el precio por hora
+                    y el IRPF.
+                </p>
+
+                <label>Horas trabajadas</label>
+                <input type="number" name="n1" value="90">
+                <br><br>
+
+                <label>Precio por hora</label>
+                <input type="number" name="n2" value="90">
+                <br><br>
+
+                <label>IRPF</label>
+                <input type="number" name="n3" value="10">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r3').innerHTML = 'El sueldo es ' + sueldo(parseInt(n1.value), parseInt(n2.value), parseInt(n3.value)) + '€';
+                ">
+
+                <p id="r3"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 4</legend>
+
+                <p>Función llamada factura que recibe el precio unitario de un producto, el número de
+                    unidades compradas, el descuento aplicado y el IVA y devuelva el total.
+                </p>
+
+                <label>Precio unitario</label>
+                <input type="number" name="n1" value="15">
+                <br><br>
+
+                <label>Unidades</label>
+                <input type="number" name="n2" value="23">
+                <br><br>
+
+                <label>Descuento</label>
+                <input type="number" name="n3" value="8">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r4').innerHTML = 'El total es ' + factura(parseInt(n1.value), parseInt(n2.value), parseInt(n3.value)) + '€';
+                ">
+
+                <p id="r4"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 5</legend>
+
+                <p>Escribe una función llamada convertir que pase de grados Celsius a Fahrenheit. (F =
+                    (9/5)*C+32).
+                </p>
+
+                <label>Grados celsius</label>
+                <input type="number" name="n1" value="31">°C
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r5').innerHTML = 'La temperatura es ' + convertir(parseInt(n1.value)) + '°F';
+                ">
+
+                <p id="r5"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 6</legend>
+
+                <p>Escribe una función llamada mayor que reciba como parámetros dos números
+                    enteros y devuelva el mayor.
+                </p>
+
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="6">
+                <br><br>
+
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="3">
+                <br><br>
+
+                <input type="button" value="Comprobar" onclick="
+                    document.getElementById('r6').innerHTML = 'El mayor es ' + mayor(parseInt(n1.value), parseInt(n2.value));
+                ">
+
+                <p id="r6"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 7</legend>
+
+                <p>Escribe una función llamada primo que reciba un número entero y devuelva si es
+                    primo o no.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="7">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    if(primo(parseInt(n1.value)))
+                        document.getElementById('r7').innerHTML = n1.value + ' es primo';
+                    else
+                        document.getElementById('r7').innerHTML = n1.value + ' no es primo';
+                ">
+
+                <p id="r7"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 8</legend>
+
+                <p>Función que calcule el área de un círculo, siendo esta A = PI * r2
+                    .
+                </p>
+
+                <label>Radio</label>
+                <input type="number" name="n1" value="5">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r8').innerHTML = 'El area es ' + area(parseInt(n1.value));
+                ">
+
+                <p id="r8"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 9</legend>
+
+                <p>Escribe una función que reciba como argumento un número y muestre por pantalla
+                    todos sus divisores.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="462">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r9').innerHTML = divisores(parseInt(n1.value));
+                ">
+
+                <p id="r9"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 10</legend>
+
+                <p>Diseña una función llamada factorial que devuelva el factorial de un número
+                    recibido como parámetro.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="6">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r10').innerHTML = 'El factorial de ' + n1.value + ' es ' + factorial(parseInt(n1.value));
+                ">
+
+                <p id="r10"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 11</legend>
+
+                <p>Escribe una función llamada binario que reciba un número decimal y devuelva una
+                    cadena de caracteres con el valor binario del número recibido.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="1985">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r11').innerHTML = 'La suma de los digitos de ' + n1.value + ' es ' + contar(parseInt(n1.value));
+                ">
+
+                <p id="r11"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 12.1 - Funcion simple</legend>
+
+                <p>Escribe una función llamada binario que reciba un número decimal y devuelva una
+                    cadena de caracteres con el valor binario del número recibido.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="231">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r12').innerHTML = 'El numero ' + n1.value + ' en binario es ' + binario(parseInt(n1.value));
+                ">
+
+                <p id="r12"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 12.2 - Funcion compleja</legend>
+
+                <p>Escribe una función llamada binario que reciba un número decimal y devuelva una
+                    cadena de caracteres con el valor binario del número recibido.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="231">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r13').innerHTML = 'El numero ' + n1.value + ' en binario es ' + binario2(parseInt(n1.value));
+                ">
+
+                <p id="r13"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 12.3 - Funcion compleja</legend>
+
+                <p>Escribe una función llamada toOtherBase que reciba un número decimal y una base y devuelva una
+                    cadena de caracteres con el valor en su base del número recibido.
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="81">
+                <br><br>
+
+                <label>Base</label>
+                <input type="number" name="n2" value="3">
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r14').innerHTML = 'El numero ' + n1.value + ' en base ' + n2.value + ' es ' + toOtherBase(parseInt(n1.value), parseInt(n2.value));
+                ">
+
+                <p id="r14"></p>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>

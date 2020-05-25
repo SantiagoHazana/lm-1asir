@@ -1,0 +1,31 @@
+body {
+    background-color: #d3d3d3;
+}
+
+#contenido {
+    background-color: #fff;
+    width: 75%;
+    align-self: auto;
+}
+
+h1 {
+    color: red;
+    font-size: 24px;
+    font-family: Verdana;
+    margin-left: 20px;
+}
+
+h2 {
+    color: navy;
+    font-size: 18px;
+    font-family: monospace;
+    margin-left: 20px;
+}
+
+p {
+    color: grey;
+    font-size: 16px;
+    font-family: Verdana;
+    text-align: justify;
+    margin-right: 20px;
+}

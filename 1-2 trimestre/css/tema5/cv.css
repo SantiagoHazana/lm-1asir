@@ -1,0 +1,32 @@
+#general-content {
+    width: 30%;
+    margin: auto;
+}
+
+fieldset {
+    border-color: green;
+    border-radius: 5px;
+    border-width: 5px;
+    /* background-color: hotpink; */
+}
+
+legend {
+    font-size: 30px;
+    margin: auto;
+    font-family: Impact;
+}
+
+input {
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+#name-input,
+#surname-input,
+#password-input,
+#dni-input,
+#sex-input,
+#image-input,
+#newsletter-input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

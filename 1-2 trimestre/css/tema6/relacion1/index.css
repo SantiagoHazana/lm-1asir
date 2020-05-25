@@ -1,0 +1,28 @@
+h1 {
+    margin: auto;
+    text-align: center;
+    text-decoration-line: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(80, 80, 80);
+}
+
+li {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 6%;
+    padding: 3px;
+    margin-top: 3px;
+}
+
+a:active {
+    color: red;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: hotpink;
+}

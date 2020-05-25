@@ -1,0 +1,53 @@
+body {
+    background-color: grey;
+}
+
+img {
+    width: 760px;
+    height: 198px;
+    outline: black solid 3px;
+}
+
+#general {
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+#banner {
+    background-color: #fff;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#content {
+    background-color: white;
+    width: 760px;
+    margin: auto;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+h3 {
+    font-family: Verdana;
+    color: blue;
+    size: 20px;
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: square;
+}

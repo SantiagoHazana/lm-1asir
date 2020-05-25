@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/tema5/cv.css">
+    <title>CV</title>
+</head>
+
+<body>
+    <div id="general-content">
+
+        <form method="post" target="_blank">
+
+            <fieldset>
+                <legend>Rellena tu CV</legend>
+
+                <div id="name-input">
+                    <label for="name">Nombre</label><br>
+                    <input type="text" id="name" name="name" size="35" maxlength="30">
+                </div>
+
+                <div id="surname-input">
+                    <label for="surname">Apellidos</label><br>
+                    <input type="text" name="apellidos" id="surname" size="35" maxlength="80">
+                </div>
+
+                <div id="password-input">
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password" size="20" maxlength="10">
+                </div>
+
+                <div id="dni-input">
+                    <label for="dni">DNI</label><br>
+                    <input type="text" name="dni" id="dni" size="20" maxlength="9">
+                </div>
+
+
+
+                <div id="sex-input">
+                    <label for="sex">Sexo</label><br>
+                    <input type="radio" name="sex" id="sex" value="male" checked="checked"> Hombre<br>
+                    <input type="radio" name="sex" value="female"> Mujer
+                    <br><br>
+                </div>
+
+                <div id="image-input">
+                    <label for="image">Incluir mi foto</label>
+                    <input type="file" name="image" id="image">
+                    <br><br>
+                </div>
+
+                <div id="newsletter-input">
+                    <input type="checkbox" name="newsletter" id="newsletter" checked="checked">
+                    <label for="newsletter">Subscribirme al boletin de novedades</label>
+                    <br><br>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Borrar los datos introducidos">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body {
+    background-color: #E6E6FA;
+    background-image: url(../../../html/tema4/examples/images_suzuki/bg_page.png);
+    background-repeat: repeat-y;
+    background-position-x: center;
+}
+
+#content {
+    width: 750px;
+    margin: auto;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+    size: 32px;
+    font-family: Calibri;
+}
+
+p {
+    size: 16px;
+    color: gray;
+    font-family: Verdana;
+}

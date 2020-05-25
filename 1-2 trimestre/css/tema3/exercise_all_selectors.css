@@ -1,0 +1,32 @@
+* {
+    color: royalblue;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: salmon;
+    font-family: monospace;
+}
+
+.special {
+    color: seagreen;
+}
+
+#crazy {
+    color: rgb(128, 128, 128);
+    font-family: fantasy;
+}
+
+p em {
+    color: red;
+}
+
+h2+h3 {
+    color: tomato;
+    font-style: italic;
+}
+
+p[lang] {
+    color: violet;
+    font-family: monospace;
+}

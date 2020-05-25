@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago Hazaña">
+    <link rel="stylesheet" href="../../../css/tema6/relacion1/ejercicio.css">
+    <script src="../../../javascript/tema6/relacion1/ejercicio10.js"></script>
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+    <h4><a href="index.html">Vovler</a></h4>
+    <h1>Ejercicio 10</h1>
+    <p>Introduce el numero de horas trabajadas en el mes del empleado, el precio por hora normal y el precio por hora extra.</p>
+
+    <form>
+        <label for="hours">Horas totales</label>
+        <input type="number" name="hours" id="hours" value="160">
+        <br><br>
+
+        <label for="normalPrice">Precio por hora normal</label>
+        <input type="number" name="normalPrice" id="normalPrice" value="10">€
+        <br><br>
+
+        <label for="extraPrice">Precio por hora extra</label>
+        <input type="number" name="extraPrice" id="extraPrice" value="12">€
+        <br><br>
+
+        <label for="irpf">IRPF</label>
+        <input type="number" name="irpf" id="irpf" value="10">%
+        <br><br>
+
+        <input type="button" value="Calcular sueldo" onclick="calculatePay()">
+    </form>
+
+    <p id="result"></p>
+</body>
+
+</html>

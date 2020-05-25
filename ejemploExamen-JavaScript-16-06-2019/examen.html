@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="functions.js"></script>
+    <title>Examen LM - Javascript y DOM</title>
+</head>
+<body>
+    <div id="content">
+        <form name='ejercicio1'>
+            <fieldset>
+                <legend>Ejercicio 1 - Numeros curiosos</legend>
+                <p name='consigna'>Número curioso: todo número natural n que cumple que n*n tiene al
+                    propio n como última cifra.</p>
+
+                <label>N&uacute;mero</label>
+                <input type="number" name="n1" value="25">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r1').innerHTML = printCurioso(n1.value);
+                ">
+
+                <p id="r1"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name='ejercicio2'>
+            <fieldset>
+                <legend>Ejercicio 2: C&aacute;lculo de n&oacute;minas</legend>
+
+                <p>Introducir el sueldo actual del empleado y los años de antigüedad</p>
+
+                <label>Sueldo</label>
+                <input type="number" name="sueldo" value="450">
+                <br><br>
+
+                <label>Antigüedad</label>
+                <input type="number" name="antig" value="11">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r2').innerHTML = 'El sueldo actual es: ' + calculateNomina(sueldo.value, antig.value) + '€';
+                ">
+
+                <p id="r2"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form id='ejercicio3'>
+            <fieldset>
+                <legend>Ejercicio 3: Chat</legend>
+                <p>Chat basico, ingresa tu nombre y mensaje, luego presiona enviar.</p>
+
+                <label>Nombre</label>
+                <select name="nombre">
+                    <option value="default" selected>-Seleccione usuario-</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="Carlos">Carlos</option>
+                    <option value="Alberto">Alberto</option>
+                    <option value="Sara">Sara</option>
+                    <option value="Linus">Linus</option>
+                    <option value="Marina">Marina</option>
+                </select>
+                <br><br>
+
+                <label>Mensaje</label>
+                <textarea name="mensaje" cols="30" rows="10" onkeypress="return limitCharacters(mensaje.value, 50)"></textarea>
+                <br><br>
+
+                <input type="button" value="Enviar" onclick="chat(nombre.value, mensaje.value);">
+                <input type="reset" value="Borrar">
+                <p id="check"></p>
+            </fieldset>
+        </form>
+
+        <p id="chat"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+    background-color: #696969;
+}
+
+#content {
+    background-color: white;
+}
+
+#banner {
+    background-color: greenyellow;
+    padding-top: 15px;
+}
+
+#maindiv {
+    background-color: white;
+    width: 880px;
+}
+
+#mainzone {
+    background-color: orange;
+}

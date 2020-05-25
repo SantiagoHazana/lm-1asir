@@ -1,0 +1,48 @@
+body {
+    background-color: #BBB;
+    background-image: url(../../../html/tema4/examples/images_suzuki/bg_page.png);
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+img {
+    width: 760px;
+    height: 198px;
+    outline: black solid 3px;
+}
+
+#banner {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#content {
+    background-color: white;
+    width: 760px;
+    margin: auto;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+h3 {
+    font-family: Verdana;
+    color: blue;
+    size: 20px;
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: square;
+}

@@ -1,0 +1,19 @@
+h1.serif {
+    font-family: serif;
+}
+
+h1.sansserif {
+    font-family: sans-serif;
+}
+
+h1.cursive {
+    font-family: cursive;
+}
+
+h1.fantasy {
+    font-family: fantasy;
+}
+
+h1.monospace {
+    font-family: monospace;
+}

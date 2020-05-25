@@ -1,0 +1,57 @@
+body{
+    background-color: grey;
+}
+
+#content {
+    margin: auto;
+    width: 50%;
+    background-color: #909090;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: underline;
+    color: honeydew;
+}
+
+legend{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 1px lavender;
+}
+
+input[type="button"]{
+    color:white;
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 200px;
+}
+
+p{
+    font-size: 20px;
+}
+
+p[id]{
+    font-size: 15px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+fieldset{
+    border: 2px solid darkblue;
+    border-radius: 5px;
+}
+
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input{
+    border-radius: 5px;
+    padding: 5px;
+}

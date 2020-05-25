@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="relacion2.css">
+    <script src="functions.js"></script>
+    <title>Relacion 2 Extendida - Estructuras de control</title>
+</head>
+<body>
+    <div id="content">
+        <form>
+            <fieldset>
+                <legend>Ejercicio 16</legend>
+
+                <p>Calcula la división de dos números introducidos utilizando restas sucesivas.</p>
+                <label>Dividendo</label>
+                <input type="number" name="n1" value="10">
+                <br><br>
+
+                <label>Divisor</label>
+                <input type="number" name="n2" value="3">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    var dividendo = parseInt(n1.value);
+                    var divisor = parseInt(n2.value);
+                    var result = successiveDivisions(dividendo, divisor);
+                    document.getElementById('r1').innerHTML = dividendo + '/' + divisor 
+                                                            + ' = ' + result + ' con resto ' 
+                                                            + (dividendo - (divisor*result));
+                ">
+
+                <p id="r1"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 17</legend>
+
+                <p>Introducir números por teclado y contar los positivos y los negativos. 
+                    El programa termina cuando se introduce un cero y muestra los resultados.
+                </p>
+
+                <input type="button" value="Calcular" onclick="
+                    var number = parseInt(prompt('Ingresar un numero'));
+                    var positives = 0;
+                    var negatives = 0;
+                    while(number != 0){
+                        if(checkPositive(number))
+                            positives++;
+                        else
+                            negatives++;
+                        
+                        number = parseInt(prompt('Ingresar un numero'));
+                    }
+                    document.getElementById('r2').innerHTML = 'Se ingresaron ' + positives + ' numeros positivos y ' 
+                                                            + negatives + ' numeros negativos.';
+                ">
+
+                <p id="r2"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 18</legend>
+
+                <p>Calcula el cuadrado de todos los números comprendidos entre dos números introducidos por teclado.</p>
+
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="2">
+                <br><br>
+
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="10">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r3').innerHTML = exercise18(parseInt(n1.value), parseInt(n2.value)); 
+                ">
+
+                <p id="r3"></p>
+            </fieldset>
+        </form>
+    
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 19</legend>
+
+                <p>Escribe un programa que calcule la multiplicación de dos números introducidos por 
+                    teclado sin utilizar el operador * 
+                </p>
+
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="4">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r4').innerHTML = 'El resultado es ' + exercise19(parseInt(n1.value), parseInt(n2.value));
+                ">
+
+                <p id="r4"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 20</legend>
+
+                <p>Realizar el programa que imprima 5 veces en la pantalla los números
+                    comprendidos entre 1 y 20 usando dos bucles.
+                </p>
+
+                <input type="button" value="Imprimir" onclick="
+                    document.getElementById('r5').innerHTML = exercise20();
+                ">
+
+                <p id="r5"></p>
+            </fieldset>
+        </form>
+        
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 21</legend>
+
+                <p>Determinar si un número introducido por teclado es primo.</p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="13">
+                <br><br>
+
+                <input type="button" value="Verificar" onclick="
+                    if(exercise21(parseInt(n1.value)))
+                        document.getElementById('r6').innerHTML = 'El numero ' + n1.value + ' es primo';
+                    else
+                        document.getElementById('r6').innerHTML = 'El numero ' + n1.value + ' no es primo';
+                ">
+
+                <p id="r6"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 22</legend>
+                <p>Realizar el programa que muestre por pantalla la tabla de multiplicar de un número
+                    dado. 
+                </p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="5">
+                <br><br>
+
+                <input type="button" value="Imprimir" onclick="
+                    document.getElementById('r7').innerHTML = exercise22(parseInt(n1.value));
+                ">
+
+                <p id="r7"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 23</legend>
+
+                <p>Escribe un programa que reciba un número por teclado y una frase. El programa
+                    deberá mostrar esa frase por pantalla tantas veces como se le indique en el
+                    número.
+                </p>
+
+                <label>Numero de repeticiones</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+
+                <label>Frase</label>
+                <input type="text" name="n2" value="Frase a repetir">
+                <br><br>
+
+                <input type="button" value="Imprimir" onclick="
+                    document.getElementById('r8').innerHTML = exercise23(parseInt(n1.value), n2.value);
+                ">
+
+                <p id="r8"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form >
+            <fieldset>
+                <legend>Ejercicio 24</legend>
+
+                <p>Programa que calcule el factorial de un número introducido por teclado</p>
+
+                <label>Numero</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+
+                <input type="button" value="Imprimir" onclick="
+                    document.getElementById('r9').innerHTML = 'El factorial de ' + n1.value + ' es ' + factorial(parseInt(n1.value));
+                ">
+
+                <p id="r9"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 25</legend>
+
+                <p>Tomando del teclado el precio por unidad de un determinado producto, se
+                    pretende imprimir un listado con los precios para unidades desde 1 a 100. Se
+                    deben aplicar una serie de descuentos, a saber: 10% a partir de 15 unidades, 15% a
+                    partir de 30 unidades, 20% a partir de 50 unidades.
+                </p>
+
+                <label>Precio unitario</label>
+                <input type="number" name="n1" value="40">€
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r10').innerHTML = exercise25(parseInt(n1.value));                    
+                ">
+
+                <p id="r10"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 26</legend>
+
+                <p>Programa que pida dos números por teclado y calcule si el segundo es múltiplo del primero.</p>
+
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="4">
+                <br><br>
+
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="8">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    if(exercise26(parseInt(n1.value), parseInt(n2.value)))
+                        document.getElementById('r11').innerHTML = n2.value + ' es multiplo de ' + n1.value;
+                    else
+                        document.getElementById('r11').innerHTML = n2.value + ' no es multiplo de ' + n1.value;
+                ">
+
+                <p id="r11"></p>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    margin: 0%;
+}
+
+#contenedor {
+    background-color: black;
+    height: 500%;
+    width: 100%;
+    color: white;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+#izquierda {
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    background-image: url("imagenes/carver_izq.jpg");
+    background-repeat: repeat-y;
+    margin-top: 0%;
+    margin-left: 0%;
+    position: absolute;
+}
+
+#derecha {
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    background-image: url("imagenes/carver_der.jpg");
+    background-repeat: repeat-y;
+    background-position: top right;
+    margin-top: 0%;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#centro {
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    background-color: black;
+    position: absolute;
+}
+
+#title {
+    color: #FFFF66;
+    text-decoration-line: underline;
+    text-align: center;
+    font-size: 3em;
+}
+
+.name {
+    color: #66ff66;
+    text-decoration-line: underline;
+    margin: auto;
+    text-align: center;
+}
+
+.character {
+    border: 2px solid red;
+    width: 95%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+#carver {
+    float: right;
+    width: 8%;
+}
+
+#tao {
+    float: right;
+    width: 9%;
+}
+
+#missery {
+    float: left;
+    width: 10%;
+}
+
+#lynch {
+    float: left;
+    width: 7%;
+}

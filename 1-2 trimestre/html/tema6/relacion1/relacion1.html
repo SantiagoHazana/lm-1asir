@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago Hazaña">
+    <link rel="stylesheet" href="../../../css/tema6/relacion1/relacion1.css">
+    <title>Relaci&oacute;n de ejercicios 1</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Relaci&oacute;n de ejercicios 1 - Operadores</h1>
+
+        <form name="f1">
+            <fieldset>
+                <legend>Ejercicio 1</legend>
+
+                <p>Por favor introduce tres numeros, se calculara la suma entre ellos</p>
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="1">
+                <br><br>
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="1">
+                <br><br>
+                <label>Tercer numero</label>
+                <input type="number" name="n3" value="1">
+                <br><br>
+                <input type="button" value="Calcular" onclick="
+                    var firstNumber = parseFloat(f1.n1.value);
+                    var secondNumber = parseFloat(f1.n2.value);
+                    var thirdNumber = parseFloat(f1.n3.value);
+                    var result = firstNumber + secondNumber + thirdNumber;
+                    alert('La suma de ' + firstNumber + ' + ' + secondNumber + ' + ' + thirdNumber + ' = ' + result);
+                ">
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f2">
+            <fieldset>
+                <legend>Ejercicio 2</legend>
+
+                <p>Introduce 5 numero para calcular su media</p>
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="1">
+                <br><br>
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="1">
+                <br><br>
+                <label>Tercer numero</label>
+                <input type="number" name="n3" value="1">
+                <br><br>
+                <label>Cuarto numero</label>
+                <input type="number" name="n4" value="1">
+                <br><br>
+                <label>Quinto numero</label>
+                <input type="number" name="n5" value="1">
+                <br><br>
+                <input type="button" value="Calcular media" onclick="    
+                    var firstNumber = parseFloat(f2.n1.value);
+                    var secondNumber = parseFloat(f2.n2.value);
+                    var thirdNumber = parseFloat(f2.n3.value);
+                    var fourthNumber = parseFloat(f2.n4.value);
+                    var fifthNumber = parseFloat(f2.n5.value);
+                    var result = (firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber) / 5;
+                    alert('La media es: ' + result);
+                ">
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f3">
+            <fieldset>
+                <legend>Ejercicio 3</legend>
+
+                <p>Introduce un numero para calcular su cuadrado</p>
+                <label>Numero</label>
+                <input type="number" name="n1" value="2">
+                <br><br>
+
+                <input type="button" value="Calcular cuadrado" onclick="
+                number = parseFloat(f3.n1.value);
+                var result = number * number;
+                alert('El cuadrado de ' + number + ' = ' + result);
+            ">
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f4">
+            <fieldset>
+                <legend>Ejercicio 4</legend>
+
+                <p>Introduce dos numeros para calcular su suma, resta, producto y resto</p>
+                <label>Primer numero</label>
+                <input type="number" name="n1" value="1">
+                <br><br>
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="1">
+                <br><br>
+
+                <input type="button" value="Realizar operaciones" onclick="
+                firstNumber = parseFloat(f4.n1.value);
+        	    secondNumber = parseFloat(f4.n2.value);
+
+                var suma = firstNumber + secondNumber;
+                var resta = firstNumber - secondNumber;
+                var producto = firstNumber * secondNumber;
+                var division = firstNumber / secondNumber;
+
+                resultText = 'Suma = ' + suma + '<br>' +
+                    'Resta = ' + resta + '<br>' +
+                    'Producto = ' + producto + '<br>' +
+                    'Division = ' + division;
+
+                document.getElementById('r4').innerHTML = resultText;
+            ">
+
+                <p id="r4"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f5">
+            <fieldset>
+                <legend>Ejercicio 5</legend>
+
+                <p>Introduce las horas trabajadas, el precio por hora y el % de IRPF para calcular el sueldo</p>
+                <label>Horas trabajadas</label>
+                <input type="number" name="n1" value="1">
+                <br><br>
+                <label>Precio por hora</label>
+                <input type="number" name="n2" value="1">€
+                <br><br>
+                <label>% IRPF</label>
+                <input type="number" name="n3" value="1">%
+                <br><br>
+
+                <input type="button" value="Calcular sueldo" onclick="
+                var hours = parseFloat(f5.n1.value);
+                var price = parseFloat(f5.n2.value);
+                var irpf = parseFloat(f5.n3.value);
+
+                var result = hours * price - (price * hours * irpf / 100);
+
+                document.getElementById('r5').innerHTML = 'El sueldo es: €' + result;
+            ">
+
+                <p id="r5"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f6">
+            <fieldset>
+                <legend>Ejercicio 6</legend>
+
+                <p>Introduce horas, minutos y segundos para calcular cuantos segundos son</p>
+                <label>Horas</label>
+                <input type="number" name="n1" value="1">
+                <br><br>
+                <label>Minutos</label>
+                <input type="number" name="n2" value="1">
+                <br><br>
+                <label>Segundos</label>
+                <input type="number" name="n3" value="1">
+                <br><br>
+
+                <input type="button" value="Calcular segundos" onclick="
+                var hours = parseFloat(f6.n1.value);
+                var minutes = parseFloat(f6.n2.value);
+                var seconds = parseFloat(f6.n3.value);
+                var resultSeconds = (hours * 60 * 60) + (minutes * 60) + seconds;
+
+                document.getElementById('r6').innerHTML = 'En total son ' + resultSeconds + ' segundos';
+            ">
+
+                <p id="r6"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f7">
+            <fieldset>
+                <legend>Ejercicio 7</legend>
+
+                <p>Introduce el precio unitario del producto, unidades compradas y descuento si aplica.</p>
+                <label>Precio unitario</label>
+                <input type="number" name="n1" value="10">€
+                <br><br>
+                <label>Unidades</label>
+                <input type="number" name="n2" value="4">
+                <br><br>
+                <label>Descuento</label>
+                <input type="number" name="n3" value="3">
+                <br><br>
+                <label>IVA</label>
+                <select name="n4">
+                <option value="0">0%</option>
+                <option value="5" selected>5%</option>
+                <option value="10">10%</option>
+                <option value="21">21%</option>
+            </select>
+                <br><br>
+
+                <input type="button" value="Calcular precio total" onclick="
+                var price = parseFloat(f7.n1.value);
+                var units = parseFloat(f7.n2.value);
+                var discount = parseFloat(f7.n3.value);
+                var iva = parseFloat(f7.n4.value);
+
+                var result = ((price * units) - (price * units * discount / 100)) * (1 + (iva / 100));
+
+                document.getElementById('r7').innerHTML = 'Precio final: ' + result.toFixed(2) + '€';
+            ">
+
+                <p id="r7"></p>
+            </fieldset>
+
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f8">
+            <fieldset>
+                <legend>Ejercicio 8</legend>
+
+                <p>Introduce el precio del articulo para saber su precio neto e iva.</p>
+                <label>Precio total</label>
+                <input type="number" name="n1" value="121">
+                <br><br>
+
+                <input type="button" value="Calcular precio total" onclick="
+                    var price = parseFloat(f8.n1.value);
+
+                    var netPrice = price / 1.21;
+                    var iva = price - netPrice;
+
+                    document.getElementById('r8').innerHTML = 'El precio neto es ' + netPrice.toFixed(2) + '€ ' + 'con ' + iva.toFixed(2) + '€ de iva.'
+            ">
+
+                <p id="r8"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f9">
+            <fieldset>
+                <legend>Ejercicio 9</legend>
+
+                <p>Introduce un numero y un exponente para realizar la cuenta.</p>
+                <label>Numero</label>
+                <input type="number" name="n1" value="2">
+                <br><br>
+
+                <label>Exponente</label>
+                <input type="number" name="n2" value="2">
+                <br><br>
+
+                <input type="button" value="Realizar operacion" onclick="
+                number = parseFloat(f9.n1.value);
+                exp = parseFloat(f9.n2.value);
+
+                var result = Math.pow(number, exp);
+
+                document.getElementById('r9').innerHTML = 'El resultado es: ' + result;
+            ">
+
+                <p id="r9"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f10">
+            <fieldset>
+                <legend>Ejercicio 10</legend>
+
+                <p>Introduce el numero de horas trabajadas en el mes del empleado, el precio por hora normal y el precio por hora extra.</p>
+                <label>Horas totales</label>
+                <input type="number" name="n1" value="180">
+                <br><br>
+
+                <label>Precio por hora normal</label>
+                <input type="number" name="n2" value="10">€
+                <br><br>
+
+                <label>Precio por hora extra</label>
+                <input type="number" name="n3" value="12">€
+                <br><br>
+
+                <label>IRPF</label>
+                <input type="number" name="n4" value="10">%
+                <br><br>
+
+                <input type="button" value="Calcular sueldo" onclick="
+                    var totalHours = parseInt(f10.n1.value);
+                    var normalPrice = parseInt(f10.n2.value);
+                    var extraPrice = parseInt(f10.n3.value);
+                    var irpf = parseInt(f10.n4.value);
+
+                    if (totalHours < 160) {
+                        totalHours = 160;
+                        pay = (totalHours * normalPrice);
+                        result = pay - (pay * irpf / 100);
+                    } else {
+                        pay = (160 * normalPrice) + ((totalHours - 160) * extraPrice);
+                        result = pay - (pay * irpf / 100);
+                    }
+
+                    document.getElementById('r10').innerHTML = 'Sueldo = ' + result + '€';
+            ">
+
+                <p id="r10"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f11">
+            <fieldset>
+                <legend>Ejercicio 11</legend>
+
+                <p>Introduzca los grados Farenheit que desea saber en Celsius</p>
+                <label>Grados Farenheit</label>
+                <input type="number" name="n1" value="80">
+                <br><br>
+
+                <input type="button" value="Calcular Celsius" onclick="
+                var farenheit = parseFloat(f11.n1.value);
+                var celcius = (farenheit - 32) * 5 / 9;
+
+                document.getElementById('r11').innerHTML = farenheit + ' ºF equivale a ' + celcius.toFixed(2) + ' ºC';
+            ">
+
+                <p id="r11"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f12">
+            <fieldset>
+                <legend>Ejercicio 12</legend>
+
+                <p>Introduzca la base y altura de un triangulo para calcular su superficie.</p>
+                <label>Base</label>
+                <input type="number" name="n1" value="2">m
+                <br><br>
+                <label>Altura</label>
+                <input type="number" name="n2" value="3">m
+                <br><br>
+
+                <input type="button" value="Calcular superficie" onclick="
+                var base = parseFloat(f12.n1.value);
+                var height = parseFloat(f12.n2.value);
+
+                var surface = base * height / 2;
+
+                document.getElementById('r12').innerHTML = 'La superficie es ' + surface.toFixed(2) + ' m2';
+            ">
+
+                <p id="r12"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f13">
+            <fieldset>
+                <legend>Ejercicio 13</legend>
+
+                <p>Introduzca el radio de una circunferencia para hallar su longitud y &aacute;rea</p>
+                <label>Radio</label>
+                <input type="number" name="n1" value="2">m
+                <br><br>
+
+                <input type="button" value="Calcular superficie" onclick="
+                var radius = parseFloat(f13.n1.value);
+
+                var long = 2 * radius * Math.PI;
+                var area = Math.PI * Math.pow(radius, 2);
+
+                document.getElementById('r13').innerHTML = 'Longitud = ' + long.toFixed(2) + 'm <br>' +
+                    '&Aacute;rea = ' + area.toFixed(2) + ' m2';
+            ">
+
+                <p id="r13"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f14">
+            <fieldset>
+                <legend>Ejercicio 14</legend>
+
+                <p>Introduzca un numero de dias para calcular los años, meses y dias que equivale.</p>
+                <label>Dias</label>
+                <input type="number" name="n1" value="300">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                var daysMonth = 30.4167;
+                var startDays = parseInt(f14.n1.value);
+                var leftDays = startDays;
+
+                var years = parseInt(startDays / 365);
+                leftDays -= (years * 365);
+
+                var months = parseInt(leftDays / daysMonth);
+                leftDays -= (months * daysMonth);
+
+                var days = leftDays;
+
+                document.getElementById('r14').innerHTML = startDays + ' dias son ' + years + ' años, ' + months + ' meses y ' + days.toFixed(2) + ' dias.';
+            ">
+
+                <p id="r14"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f15">
+            <fieldset>
+                <legend>Ejercicio 15</legend>
+
+                <p>Introduzca un numero de cuatro cifras para descomponerlo en unidades, decenas, centenas y millares.</p>
+                <label>Numero de 4 cifras</label>
+                <input type="number" name="n1" value="6792">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    var number = f15.n1.value.toString();
+
+                    var unidades = number[3];
+                    var decenas = number[2] + '0';
+                    var centenas = number[1] + '00';
+                    var millares = number[0] + '000';
+
+                    document.getElementById('r15').innerHTML = 'Unidades: ' + unidades + '<br>' +
+                        'Decenas: ' + decenas + '<br>' +
+                        'Centenas: ' + centenas + '<br>' +
+                        'Millares: ' + millares + '<br>';
+            ">
+
+                <p id="r15"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+
+
+        <form name="f16">
+            <fieldset>
+                <legend>Ejercicio 16</legend>
+
+                <p>Introduzca las ganancias de los 12 meses para calcular la media.</p>
+                <label>Enero</label>
+                <input type="number" name="n1" value="679.56">
+                <br><br>
+
+                <label>Febrero</label>
+                <input type="number" name="n2" value="1253.85">
+                <br><br>
+
+                <label>Marzo</label>
+                <input type="number" name="n3" value="4137.58">
+                <br><br>
+
+                <label>Abril</label>
+                <input type="number" name="n4" value="2443.12">
+                <br><br>
+
+                <label>Mayo</label>
+                <input type="number" name="n5" value="2347.90">
+                <br><br>
+
+                <label>Junio</label>
+                <input type="number" name="n6" value="3452.34">
+                <br><br>
+
+                <label>Julio</label>
+                <input type="number" name="n7" value="321.69">
+                <br><br>
+
+                <label>Agosto</label>
+                <input type="number" name="n8" value="7543.47">
+                <br><br>
+
+                <label>Septiembre</label>
+                <input type="number" name="n9" value="3421.57">
+                <br><br>
+
+                <label>Octubre</label>
+                <input type="number" name="n10" value="2345.67">
+                <br><br>
+
+                <label>Noviembre</label>
+                <input type="number" name="n11" value="8765.45">
+                <br><br>
+
+                <label>Diciembre</label>
+                <input type="number" name="n12" value="523.69">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                var months = new Array(12);
+                var final = 0;
+                months[0] = parseFloat(f16.n1.value);
+                months[1] = parseFloat(f16.n2.value);
+                months[2] = parseFloat(f16.n3.value);
+                months[3] = parseFloat(f16.n4.value);
+                months[4] = parseFloat(f16.n5.value);
+                months[5] = parseFloat(f16.n6.value);
+                months[6] = parseFloat(f16.n7.value);
+                months[7] = parseFloat(f16.n8.value);
+                months[8] = parseFloat(f16.n9.value);
+                months[9] = parseFloat(f16.n10.value);
+                months[10] = parseFloat(f16.n11.value);
+                months[11] = parseFloat(f16.n12.value);
+
+                months.forEach(money => {
+                    final += money;
+                });
+
+                media = final / 12;
+
+                document.getElementById('r16').innerHTML = 'La ganancia media es ' + media.toFixed(2);
+            ">
+
+                <p id="r16"></p>
+            </fieldset>
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="relacion2.css">
+    <script src="functions.js"></script>
+    <title>Relacion 2 - Estructuras de control</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Relacion 2 - Estructuras de control</h1>
+
+        <form name="f1">
+            <fieldset>
+                <legend>Ejercicio 1</legend>
+
+                <p>Introduce un numero para determinar si esta entre 1 y 10</p>
+                <label>Numero</label>
+                <input type="number" name="n1" value="9">
+                <br><br>
+                <input type="button" value="Calcular" onclick="
+                    var num = parseFloat(f1.n1.value);
+                    if(num >= 1 && num <= 10){
+                        document.getElementById('r1').innerHTML = 'El numero esta entre 1 y 10';
+                    }else{
+                        document.getElementById('r1').innerHTML = 'El numero NO esta entre 1 y 10';
+                    }
+                ">
+
+                <p id="r1"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f2">
+            <fieldset>
+                <legend>Ejercicio 2</legend>
+
+                <p>Introduce 3 numeros para determinar el mayor</p>
+                <label>Primero numero</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="6">
+                <br><br>
+                <label>Tercer numero</label>
+                <input type="number" name="n3" value="4">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    var num1 = parseFloat(f2.n1.value);
+                    var num2 = parseFloat(f2.n2.value);
+                    var num3 = parseFloat(f2.n3.value);
+
+                    if (num1 >= num2 && num1 >= num3){
+                        document.getElementById('r2').innerHTML = 'El numero ' + num1 + ' es el mayor';
+                    }else if (num2 >= num1 && num2 >= num3){
+                        document.getElementById('r2').innerHTML = 'El numero ' + num2 + ' es el mayor';
+                    }else if(num3 >= num1 && num3 >= num2){
+                        document.getElementById('r2').innerHTML = 'El numero ' + num3 + ' es el mayor';
+                    }
+                ">
+
+                <p id="r2"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f3">
+            <fieldset>
+                <legend>Ejercicio 3</legend>
+                    
+                <p>Introduce 3 numeros para ordernarlos de menor a mayor</p>
+
+                <label>Primero numero</label>
+                <input type="number" name="n1" value="3">
+                <br><br>
+                <label>Segundo numero</label>
+                <input type="number" name="n2" value="6">
+                <br><br>
+                <label>Tercer numero</label>
+                <input type="number" name="n3" value="4">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    var num1 = parseFloat(f3.n1.value);
+                    var num2 = parseFloat(f3.n2.value);
+                    var num3 = parseFloat(f3.n3.value);
+
+                    if (num1 > num2 && num1 > num3){
+                        if (num2 > num3){
+                            document.getElementById('r3').innerHTML = num1 + ' > ' + num2 + ' > ' + num3;
+                            // num1 > num2 > num3
+                        }else{
+                            document.getElementById('r3').innerHTML = num1 + ' > ' + num3 + ' > ' + num2;
+                            // num1 > num3 > num2
+                        }
+                    }else if (num2 > num1 && num2 > num3){
+                        if (num1 > num3){
+                            document.getElementById('r3').innerHTML = num2 + ' > ' + num1 + ' > ' + num3;
+                            // num2 > num1 > num3
+                        }else{
+                            document.getElementById('r3').innerHTML = num2 + ' > ' + num3 + ' > ' + num1;
+                            // num2 > num3 > num1
+                        }
+                    }else if(num3 > num1 && num3 > num2){
+                        if (num1 > num2){
+                            document.getElementById('r3').innerHTML = num3 + ' > ' + num1 + ' > ' + num2;
+                            // num3 > num1 > num2
+                        }else{
+                            document.getElementById('r3').innerHTML = num3 + ' > ' + num2 + ' > ' + num1;
+                            // num3 > num2 > num1
+                        }
+                    }else if (num1 == num2 && num1 == num3){
+                        document.getElementById('r3').innerHTML = num3 + ' = ' + num2 + ' = ' + num1;
+                    }
+                ">
+
+                <p id="r3"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f4">
+            <fieldset>
+                <legend>Ejercicio 4</legend>
+
+                <p>Introduce la nota para saber la calificacion</p>
+                <label>Nota</label>
+                <input type="number" name="n1" value="6.55">
+                <br><br>
+                <input type="button" value="Calcular" onclick="
+                    var nota = parseFloat(f4.n1.value);
+
+                    switch (true){
+                        case (nota>=5 && nota < 6):
+                            document.getElementById('r4').innerHTML = ('Suficiente');
+                            break;
+                        
+                        case (nota>=6 && nota<7):
+                            document.getElementById('r4').innerHTML = ('Bien');
+                            break;
+                        
+                        case (nota>=7 && nota<9):
+                            document.getElementById('r4').innerHTML = ('Notable');
+                            break;  
+
+                        case (nota>=9 && nota<=10):
+                            document.getElementById('r4').innerHTML = ('Sobresaliente');
+                            break;
+                        default:
+                            document.getElementById('r4').innerHTML = ('Desaprobado');
+                            break;
+                    }
+                ">
+
+                <p id="r4"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f5">
+            <fieldset>
+                <legend>Ejercicio 5</legend>
+
+                <p>Imprimir los numeros impares entre 100 y 120</p>
+                <input type="button" value="Imprimir" onclick="
+                    var result = '';
+
+                    for (var i = 100; i <= 120; i++){
+                        if(i%2 != 0){
+                            result += i + ' - ';
+                        }
+                    }
+
+                    document.getElementById('r5').innerHTML = result;
+                ">
+
+                <p id="r5"></p>
+            </fieldset>
+        </form>    
+
+        <br><br>
+
+        <form name="f6">
+            <fieldset>
+                <legend>Ejercicio 6</legend>
+
+                <p>Imprimir los multiplos de 3 y entre 1 y 50</p>
+
+                <input type="button" value="Imprimir" onclick="
+                    var result = '';
+                    
+                    for (var i = 1; i <= 50; i++){
+                        if(i%3==0){
+                            result += i + ' - ';
+                        }
+                    }
+
+                    document.getElementById('r6').innerHTML = result;
+                ">
+
+                <p id="r6"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f7">
+            <fieldset>
+                <legend>Ejercicio 7</legend>
+
+                <p>Leer todos los numeros hasta introducir 0 y sumarlos</p>
+
+                <input type="button" value="Sumar" onclick="
+                    var result = 0;
+                    var num = 0;
+
+                    do{
+                        num = parseFloat(prompt('Introducir un numero'));
+                        result += num;
+                    }
+                    while(num != 0);
+                    
+                    document.getElementById('r7').innerHTML = 'La suma de todos los numeros es ' + result;
+                ">
+
+                <p id="r7"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f8">
+            <fieldset>
+                <legend>Ejercicio 8</legend>
+
+                <p>Imprimir el cuadrado de todos los numeros comprendidos entre 1 y 10</p>
+
+                <input type="button" value="Calcular" onclick="
+                    var result = '';
+
+                    for (var i = 1; i <= 10; i++){
+                        result += i+'^2 = ' + Math.pow(i, 2) + ' || ';
+                    }
+
+                    document.getElementById('r8').innerHTML = result;
+                ">
+
+                <p id="r8"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f9">
+            <fieldset>
+                <legend>Ejercicio 9</legend>
+
+                <p>Ingresa una frase y el numero de veces que desea repetirla</p>
+
+                <label>Frase</label>
+                <input type="text" name="n1" value="Ingrese una frase">
+
+                <br><br>
+
+                <label>Repeticiones</label>
+                <input type="number" name="n2" value="3">
+
+                <br><br>
+
+                <input type="button" value="Imprimir" onclick="
+                    document.getElementById('r9').innerHTML = '';
+                    var frase = f9.n1.value;
+                    var repeticiones = parseInt(f9.n2.value);
+
+                    for (var i = 0; i < repeticiones; i++){
+                        document.getElementById('r9').innerHTML += frase + '<br>';
+                    }
+                ">
+
+                <p id="r9"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f10">
+            <fieldset>
+                <legend>Ejercicio 10</legend>
+
+                <p>Escriba una palabra para comprobar si es palindroma</p>
+
+                <label>Palabra</label>
+                <input type="text" name="n1" value="Neuquen">
+
+                <br><br>
+
+                <input type="button" value="Comprobar" onclick="
+                    if(palindrome(f10.n1.value)){
+                        document.getElementById('r10').innerHTML = 'Es una palabra palindroma'
+                    }else{
+                        document.getElementById('r10').innerHTML = 'No es una palabra palindroma'
+                    }
+                ">
+
+                <p id="r10"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f11">
+            <fieldset>
+                <legend>Ejercicio 11</legend>
+
+                <p>Ingrese una palabra o frase para hackearla</p>
+
+                <label>Texto</label>
+                <input type="text" name="n1" value="Hacking">
+                <br><br>
+                <input type="button" value="Hackear" onclick="
+                    document.getElementById('r11').innerHTML = hackText(f11.n1.value);
+                ">
+                <p id="r11"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form name="f12">
+            <fieldset>
+                <legend>Ejercicio 12</legend>
+
+                <p>Ingrese una frase para verificar si es palindroma</p>
+
+                <label>Frase</label>
+                <input type="text" name="n1" value="Ana la galana">
+                <br><br>
+                <input type="button" value="Verificar" onclick="
+                    if(palindromePhrase(f12.n1.value)){
+                        document.getElementById('r12').innerHTML = 'Es una frase palindroma';
+                    }else{
+                        document.getElementById('r12').innerHTML = 'No es una frase palindroma';
+                    }
+                ">
+
+                <p id="r12"></p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

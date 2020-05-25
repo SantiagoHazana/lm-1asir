@@ -1,0 +1,13 @@
+textarea {
+    overflow-y: scroll;
+    resize: none;
+}
+
+#general-content {
+    width: 30%;
+    margin: auto;
+}
+
+#price {
+    width: 50px;
+}
