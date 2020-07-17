@@ -293,3 +293,20 @@ function rel3E14(){
 
     return suma / contador;
 }
+
+function testingg(){
+    var matriz = [0,1,2,3,4];
+
+    var contador = 0;
+    for (; contador < matriz.length;) {
+        console.log(matriz[contador]);
+        contador = contador + 1;
+    }
+
+    contador = 0;
+
+    while(contador < matriz.length){
+        console.log(matriz[contador]);
+        contador = contador + 1;
+    }
+}

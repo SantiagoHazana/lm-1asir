@@ -26,6 +26,42 @@
 <body>
     <div>
         <h1>Relacion 1 - Javascript</h1>
+
+        <form id="ex">
+            <fieldset>
+                <legend>Ejercicio X</legend>
+
+                <p>Introducir un numero para saber si es positivo o negativo</p>
+                <label>Numero</label>
+                <input type="number" name="numero">
+                <br><br>
+                <input type="button" value="Calcular" onclick="
+                    if(positivo(numero.value)){
+                        document.getElementById('rx').innerHTML = 'El numero es positivo';
+                    }else{
+                        document.getElementById('rx').innerHTML = 'El numero es negativo';
+                    }
+                ">
+
+                <p id='rx'></p>
+            </fieldset>
+        </form>
+
+        <form id="e15">
+            <fieldset>
+                <legend>Ejercicio 15</legend>
+
+                <p>Introducir un numero de 4 cifras para....</p>
+                <label>Numero de 4 cifras</label>
+                <input type="number" name="numero">
+                <br><br>
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r15').innerHTML = descomponer(numero.value);
+                ">
+
+                <p id='r15'></p>
+            </fieldset>
+        </form>
     </div>
 </body>
 </html>
