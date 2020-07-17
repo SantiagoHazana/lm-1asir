@@ -1,0 +1,62 @@
+#content {
+    padding: 5px;
+    width: 70%;
+    margin: auto;
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: navy;
+}
+
+fieldset{
+    border: 2px solid navy;
+    border-radius: 5px;
+}
+
+legend{
+    font-size: 25px;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 1px 1px black;
+}
+
+p{
+    font-size: 20px;
+}
+
+input[type="button"], input[type="reset"]{
+    border-radius: 5px;
+    color: white;
+    background-color: #008CBA;
+    border: 2px solid #008CBA;
+    padding: 5px;
+}
+
+input[type="button"]:hover, input[type="reset"]:hover{
+    background-color: white;
+    color: black;
+}
+
+p[id]{
+    border-top: 2px solid black;
+    padding-top: 5px;
+}
+
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="number"], input[type="text"], textarea{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+span{
+    color: red;
+    font-size: 12px;
+}

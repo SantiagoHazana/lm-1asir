@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="functions.js"></script>
+    <title>Examen</title>
+</head>
+<body>
+    <div id="content">
+
+        <h1>Examen Javascript y DOM</h1>
+        <br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 1 - Numeros Perfectos</legend>
+
+                <p>Ingrese un numero para calcular la suma de los divisores del mismo. 
+                    Tambien se evaluara si el numero es perfecto.</p>
+
+                    <label>Numero</label>
+                    <input type="number" name="n1" value="6">
+                    <br><br>
+
+                    <input type="button" value="Calcular" onclick="
+                        var numero = parseInt(n1.value);
+                        var sumDiv = sumaDivisores(numero);
+                        if(checkPerfect(numero, sumDiv)){
+                            document.getElementById('r1').innerHTML = 'La suma de los divisores de ' + numero + ' es ' + sumDiv + ' (' + sumaDivisoresString(numero) + ')' + ' y es un numero perfecto.'
+                        }else{
+                            document.getElementById('r1').innerHTML = 'La suma de los divisores de ' + numero + ' es ' + sumDiv + ' y no es un numero perfecto.'
+                        }
+                    ">
+                    <br><br>
+
+                    <p id="r1"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 2 - Viaje de estudios</legend>
+
+                <p>Ingrese el numero de alumnos que viajaran para calcular el costo
+                    del autobus y cuanto debe pagar cada alumno.
+                </p>
+
+                <label>Numero de alumnos</label>
+                <input type="number" name="n1" value="110">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r2').innerHTML = 'Se debe abonar ' + viajeEstudios(parseInt(n1.value)) + '€ a la compañia de autobuses <br>' 
+                    + 'Cobrando 25€ por alumno, siendo un total de ' + parseInt(n1.value)*25 + '€';
+                ">
+
+                <p id="r2"></p>
+            </fieldset>
+        </form>
+
+        <br><br>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 3 - Coleccion de discos</legend>
+
+                <p>Ingrese un nombre del grupo si no esta en el listado y luego el titulo del album</p>
+
+                <label>Grupo</label>
+                <input type="text" name="grupo">
+                <input type="button" value="?" onclick="alert('Debe ingresar el grupo')">
+                <input type="button" value="+" onclick="addAlbumToList(grupo.value)">
+                <span id="errorGrupo"></span>
+                <br><br>
+
+                <label>Grupos disponibles</label>
+                <select name="grupoList" id="grupoList">
+                    <option value="default" selected>--Selecciona grupo--</option>
+                    <option value="Guns N' Roses">Guns N' Roses</option>
+                    <option value="Queen">Queen</option>
+                    <option value="AC/DC">AC/DC</option>
+                </select>
+                <input type="button" value="?" onclick="alert('Debe seleccionar un grupo del listado')">
+                <br><br>
+
+                <label>Titulo del album</label>
+                <textarea name="album" cols="30" rows="10"></textarea>
+                <input type="button" value="?" onclick="alert('Debe ingresar el titulo del album')">
+                <span id="errorTitulo"></span>
+                <br><br>
+
+                <label>Borrar numero</label>
+                <input type="number" name="borrar" value="0">
+                <span id="errorDelete"></span>
+                <br><br>
+
+                <input type="button" value="Enviar" onclick="checkIfComplete(grupo.value, grupoList, album.value)">
+                <input type="reset" value="Cancelar">
+                <input type="button" value="Borrar" onclick="removeAlbum(parseInt(borrar.value))">
+            </fieldset>
+        </form>
+
+        <div id="list"></div>
+
+    </div>
+</body>
+</html>

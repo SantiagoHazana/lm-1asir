@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
+    <form>
+        <fieldset>
+            <legend>Prueba</legend>
+
+            <p>Introduzca un numero para ver si es par.</p>
+
+            <label>Numero</label>
+            <input type="number" name="n1">
+            <br><br>
+
+            <input type="button" value="Comprobar" onclick="
+                if(par(parseInt(n1.value))){
+                    document.getElementById('r1').innerHTML = n1.value + ' Es un numero par';
+                }else{
+                    document.getElementById('r1').innerHTML = n1.value + ' No es un numero par';
+                }
+            ">
+
+            <p id="r1"></p>
+        </fieldset>
+    </form>
+
 </body>
 </html>

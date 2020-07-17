@@ -21,18 +21,18 @@ function printCurioso(number){
 function calculateNomina(sueldo, antiguedad){
     sueldo = parseInt(sueldo);
     antiguedad = parseInt(antiguedad);
+
     if(sueldo < 500 && antiguedad >= 10)
         return sueldo * 1.2;
     else if (sueldo < 500)
         return sueldo * 1.05;
-    
-    return sueldo;
+    else
+        return sueldo;
 }
 
 function chat(user, message){
     if(user == 'default' || message.length == 0){
         document.getElementById('check').innerHTML = 'Por favor rellene todos los campos';
-        console.log('rechazado');
     }else{
         document.getElementById('check').innerHTML = '';
         var pChat = document.getElementById('chat');
