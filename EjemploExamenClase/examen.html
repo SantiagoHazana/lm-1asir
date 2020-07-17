@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="functions.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Ejemplo Examen</title>
 </head>
+
 <body>
     <div id="content">
-    
+
         <form>
             <fieldset>
                 <legend>Ejercicio 1 - Desborde</legend>
@@ -25,7 +27,7 @@
                         document.getElementById('r1').innerHTML = 'El numero no es desbordado';
                 ">
 
-                <p id='r1'></p>
+                <p id="r1"></p>
             </fieldset>
         </form>
 
@@ -33,23 +35,21 @@
             <fieldset>
                 <legend>Ejercicio 2 - Pedido de frutas</legend>
 
-                <p>Ingrese la cantidad en kg a comprar por fruta. Si compra 5kg o mas obtendra
-                    un descuento del 10%. Presione 'Comprar' para calcular su total. 
-                    Se cobraran 5€ por gastos de envio.
+                <p>Ingrese la cantidad en kg a comprar por fruta. Si compra 5kg o mas obtendra un descuento del 10%. Presione 'Comprar' para calcular su total. Se cobraran 5€ por gastos de envio.
                 </p>
 
                 <label>Peras</label>
                 <input type="number" name="peras" value="3">
                 <br><br>
-                
+
                 <label>Manzanas</label>
                 <input type="number" name="manzanas" value="5.3">
                 <br><br>
-                
+
                 <label>Fresas</label>
                 <input type="number" name="fresas" value="4">
                 <br><br>
-                
+
                 <label>Sandia</label>
                 <input type="number" name="sandia" value="6.75">
                 <br><br>
@@ -58,7 +58,7 @@
                                 parseFloat(peras.value), parseFloat(manzanas.value),
                                 parseFloat(fresas.value), parseFloat(sandia.value));">
                 <p id="r2"></p>
-                
+
             </fieldset>
         </form>
 
@@ -69,20 +69,24 @@
                 <p>Introduza el grupo y titulo del album para agregarlo a su lista de coleccion.</p>
 
                 <label>Grupo</label>
-                <input type="text" name="grupo">
+                <input type="text" name="grupo" id="grupo">
+                <input type="button" value="?" onclick="alert('Debe ingresar el nombre de un grupo')">
+                <span id="e1"></span>
                 <br><br>
 
                 <label>Titulo del Album</label>
-                <textarea name="titulo" cols="30" rows="10" onkeypress="return limitCharacters(titulo.value, 50)"></textarea>
+                <textarea name="titulo" id="titulo" cols="30" rows="10" onkeypress="return limitCharacters(titulo.value, 50)"></textarea>
+                <input type="button" value="?" onclick="alert('Debe ingrear un titulo')">
+                <span id="e2"></span>
                 <br><br>
 
                 <input type="button" value="Agregar" onclick="agregarAlbum(grupo.value, titulo.value)">
                 <input type="reset" value="Borrar">
-                <p id="check"></p>
             </fieldset>
         </form>
 
         <p id="list"></p>
     </div>
 </body>
+
 </html>

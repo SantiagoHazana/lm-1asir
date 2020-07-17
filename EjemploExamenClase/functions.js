@@ -1,22 +1,21 @@
-
-function sumCuadDig(num){
+function sumCuadDig(num) {
     num = parseInt(num);
     var total = 0;
-    
-    while (num!==0){
-        total += Math.pow((num%10), 2);
-        num = Math.trunc(num/10);
+
+    while (num !== 0) {
+        total += Math.pow((num % 10), 2);
+        num = Math.trunc(num / 10);
     }
     return total;
 }
 
-function desbordado(num){
-    return sumCuadDig(num)>num;
+function desbordado(num) {
+    return sumCuadDig(num) > num;
 }
 
-function allDesbordados(num){
+function allDesbordados(num) {
     var result = '';
-    for(var i = 1; i <= num; i++)
+    for (var i = 1; i <= num; i++)
         if (desbordado(i))
             result += i + ', ';
 
@@ -24,7 +23,7 @@ function allDesbordados(num){
 }
 
 
-function totalFruits(peras, manzanas, fresas, sandia){
+function totalFruits(peras, manzanas, fresas, sandia) {
     var precioPeras = 3;
     var precioManzanas = 2.5;
     var precioFresas = 4;
@@ -45,42 +44,44 @@ function totalFruits(peras, manzanas, fresas, sandia){
     result.innerHTML += '<strong>Fresas: </strong>' + fresas + 'kg x ' + precioFresas + '€ = ' + finalFresas + '€ <br>';
     result.innerHTML += '<strong>Sandia: </strong>' + sandia + 'kg x ' + precioSandia + '€ = ' + finalSandias + '€ <br>';
     result.innerHTML += '<strong>Total = </strong>' + precioTotal + '€';
-    
+
 }
 
-function calculatePrice(kg, price, kgDescuento){
-    if(kg >= kgDescuento)
-        return calculateDiscount(kg*price, 10);
-    
-    return kg*price;
+function calculatePrice(kg, price, kgDescuento) {
+    if (kg >= kgDescuento)
+        return calculateDiscount(kg * price, 10);
+
+    return kg * price;
 }
 
-function calculateDiscount(value, discount){
-    return value * (1 - (discount/100));
+function calculateDiscount(value, discount) {
+    return value * (1 - (discount / 100));
 }
 
 var albumCount = 0;
 
-function agregarAlbum(grupo, titulo){
-    if(grupo.length == 0 || titulo.length == 0){
-        document.getElementById('check').innerHTML = 'Por favor rellene todos los campos';
-    }else{
+function agregarAlbum(grupo, titulo) {
+    if (grupo.length == 0) {
+        showMessage('e1', 'Por favor ingrese el grupo');
+        showMessage('e2', '');
+        document.getElementById('grupo').focus();
+    } else if (titulo.length == 0) {
+        showMessage('e2', 'Por favor ingrese el titulo');
+        showMessage('e1', '');
+        document.getElementById('titulo').focus();
+    } else {
         albumCount++;
-        document.getElementById('check').innerHTML = '';
+        showMessage('e1', '');
+        showMessage('e2', '');
         var pChat = document.getElementById('list');
         pChat.innerHTML += '<strong>' + albumCount + '. ' + grupo + '</strong>' + ': ' + titulo + '<br>';
     }
 }
 
-function limitCharacters(text, limit){
+function limitCharacters(text, limit) {
     return text.length <= limit;
 }
 
-
-
-
-
-
-
-
-
+function showMessage(id, message) {
+    document.getElementById(id).innerHTML = message;
+}
