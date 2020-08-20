@@ -26,6 +26,85 @@
 <body>
     <div>
         <h1>Relacion 2 y extendida - Javascript</h1>
+
+
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 18</legend>
+
+                <p>Calcula el cuadrado de todos los números comprendidos entre dos números
+                    introducidos por teclado.</p>
+
+                <div>
+                    <label>Primer numero</label>
+                    <input type="number" name="num1" id="num1">
+                </div>
+
+                <div>
+                    <label>Segundo numero</label>
+                    <input type="number" name="num2" id="num2">
+                </div>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r18').innerHTML = ejer18(num1.value, num2.value);
+                ">
+
+                <p id="r18"></p>
+
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 22</legend>
+
+                <p>Realizar el programa que muestre por pantalla la tabla de multiplicar de un número
+                    dado. </p>
+
+                <div>
+                    <label>Numero</label>
+                    <input type="number" name="num1" id="num1">
+                </div>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r22').innerHTML = ejer22(num1.value);
+                ">
+
+                <p id="r22"></p>
+
+            </fieldset>
+        </form>
+        
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 23</legend>
+
+                <p>Escribe un programa que reciba un número por teclado y una frase. El programa
+                    deberá mostrar esa frase por pantalla tantas veces como se le indique en el
+                    número.</p>
+
+                <div>
+                    <label>Repeticiones</label>
+                    <input type="number" name="num" id="num">
+                </div>
+                <br>
+                <div>
+                    <label>Frase</label>
+                    <input type="text" name="texto" id="texto">
+                </div>
+                <br>
+                <div>
+                    <input type="button" value="Imprimir" onclick="
+                        document.getElementById('r23').innerHTML = ejer23(num.value, texto.value);
+                    ">
+                </div>
+                <p id="r23"></p>
+
+            </fieldset>
+        </form>
+
     </div>
 </body>
 </html>

@@ -149,3 +149,84 @@ function factorial2(num){
     
     return num * factorial2(num-1);
 }
+
+
+// Ejercicio 18 Calcula el cuadrado de todos los números comprendidos entre dos números
+// introducidos por teclado.
+// Devolver un string con los resultados, ej: 1-5 = 1 - 4 - 9 - 16 - 25 - 
+
+function ejer18(num1, num2){
+    var resultado = '';
+
+    for (var i = num1; i <= num2; i++){
+        var cuadrado = i**2;
+        resultado += cuadrado + ' - ';
+    }
+    return resultado.substring(0, resultado.length-3);
+}
+
+// Ejercicio 22 Realizar el programa que muestre por pantalla la tabla de multiplicar de un número dado. 
+
+function ejer22(num){
+    var resultado = '';
+
+    for (var i = 1; i <= 10; i++){
+        var mult = num*i;
+        resultado += num + ' * ' + i + ' = ' + mult + '<br>';
+    }
+
+    return resultado;
+}
+
+// Ejercicio 22 con while
+function ejer22v2(num){
+    var resultado = '';
+    var i = 1;
+    while (i<=10){
+        var mult = num*i;
+        resultado += num + ' * ' + i + ' = ' + mult + '\n';
+        i++;
+    }
+
+    return resultado;
+}
+
+
+//Ejercicio 23 - el resultado como el 22, una linea debajo de la otra
+function ejer23(num, frase){
+    var resultado = '';
+    var i = 1;
+
+    while(i <= num){
+        resultado += frase + '<br>';
+        i++;
+    }
+
+    return resultado;
+}
+
+// Ejercicio 20
+// Realizar el programa que imprima 5 veces en la pantalla los números
+// comprendidos entre 1 y 20 usando dos bucles.
+
+function ejer20(){
+    for (var i = 0; i < 5; i++){
+        console.log('Repeticion ' + (i+1));
+        for(var j = 1; j <= 20; j++){
+            console.log(j);
+        }
+    }
+}
+
+
+
+
+
+// Equivalentes, vale con cualquier operador (+ - / *)
+i = i + 1;
+i += 1;
+i++;
+
+// Equivalentes
+i = i + 2;
+i += 2;

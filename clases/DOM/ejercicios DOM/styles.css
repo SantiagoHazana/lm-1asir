@@ -1,0 +1,76 @@
+.botonEj {
+    display: block;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: burlywood;
+    padding: 10px;
+}
+
+.botonEj:hover {
+    background-color: cadetblue;
+}
+
+.botonEj:active {
+    background-color: rgb(63, 132, 134);
+}
+
+a{
+    display: block;
+    margin-top: 10px;
+}
+
+table, td, tr {
+    margin-top: 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+p{
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+select{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    text-decoration: unset;
+    width: fit-content;
+    padding: 5px;
+}
+
+a:hover{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#parrafos {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#vinculos {
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#tabla {
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#listado{
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}

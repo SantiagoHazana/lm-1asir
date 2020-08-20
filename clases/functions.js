@@ -173,11 +173,20 @@ function bucle5DoWhile(array){
 
 
 function par(numero){
+    if(typeof(numero) != Number){
+        showError();
+        return;
+    }
+
     if(numero%2 == 0){
         return true;
     }else{
         return false;
     }
+}
+
+function showError(){
+    document.getElementById('f1n1').style.border = "2px solid red";
 }
 
 
@@ -308,5 +317,30 @@ function testingg(){
     while(contador < matriz.length){
         console.log(matriz[contador]);
         contador = contador + 1;
+    }
+}
+
+
+// Ejercicio bucles anidados
+
+var nombres = ['Sara', 'Marina', 'Santiago'];
+var numeros = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]];
+
+// Quiero imprimir letra por letra o numero por numero
+
+function dobleMatriz(){
+    for (var i = 0; i < nombres.length; i++){
+        console.log(nombres[i]);
+        for(var j = 0; j < nombres[i].length; j++){
+            console.log(nombres[i][j]);
+        }
+    }
+}
+
+function dobleMatriz2(){
+    for (var i = 0; i < numeros.length; i++){
+        for(var j = 0; j < numeros[i].length; j++){
+            console.log(numeros[i][j]);
+        }
     }
 }

@@ -63,3 +63,67 @@ function positivo(num){
         return false;
     }
 }
+
+//Ejercicio 10
+
+function ejer10(horas, precio, precioExtra, irpf){
+    // si tengo mas de 160 horas, van a haber extras, (horas - 160) = las extra
+    var sueldo = 0;
+    if(horas > 160){
+        var pagoNormal = 160 * precio;
+
+        var horasExtra = horas-160;
+        var pagoExtra = horasExtra * precioExtra;
+
+        var pagoTotal = pagoNormal + pagoExtra;
+        
+        sueldo = pagoTotal - ((pagoTotal)*irpf/100);
+        
+        return sueldo;
+    }else{
+        var pagoNormal = horas * precio;
+        
+        sueldo = pagoNormal - ((pagoNormal)*irpf/100);
+        
+        return sueldo;
+    }
+}
+
+
+//Ejercicio 14
+
+function dias(dias){
+    var diasOriginal = dias;
+
+    var diasAno = 365;
+    var diasMes = 30.416;
+
+    var anos = 0;
+    var meses = 0;
+
+    // Calculo anos
+    if(dias > diasAno){
+        anos = parseInt(dias / diasAno);
+        dias = dias - (anos*diasAno);
+    }
+
+    // Calculo meses
+    if(dias > diasMes){
+        meses = parseInt(dias / diasMes);
+        dias = dias - (meses*diasMes);
+    }
+
+    return diasOriginal + ' son: ' + anos + ' anos, ' + meses + ' meses, ' + dias.toFixed(2) + ' dias.';
+}
+
+//Ejercicio 6
+
+function segundos(horas, minutos, segundos){
+    var segundosTotales = segundos;
+
+    segundosTotales += (minutos*60);
+
+    segundosTotales += (horas*60*60);
+
+    return segundosTotales;
+}

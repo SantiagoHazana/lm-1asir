@@ -1,0 +1,10 @@
+1. Crear una función que seleccione el primer párrafo y modificar el estilo.
+2. Crear una función que selecciones todos los párrafos pertenecientes a la misma clase (class = “algo”) y modificar el estilo.
+3. Agregar al onClick del botón “Número párrafos” una función que me diga el número de párrafos (alert).
+4. Agregar un párrafo nuevo al final del div con id=”parrafos”, ponerle un texto a elección.
+5. Seleccionar un vinculo y cambiarle la direccion a https://www.google.com y su texto para que corresponda.
+6. Pedir al usuario un número y crear esa cantidad de párrafos con un texto a elección de ustedes, crearlos debajo del párrafo creado en el punto 4.
+7. Modificar el HTML para poder identificar el párrafo creado en el punto 4 y eliminarlo.
+8. Pedirle al usuario el número de fila y columna que se quiere modificar y el texto a modificar, cambiar el texto de esa celda.
+9. Agregar una opción al listado de nombres, pedir el nombre al usuario.
+10. Eliminar todos los párrafos, uno por uno.

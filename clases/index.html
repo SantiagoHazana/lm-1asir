@@ -8,14 +8,14 @@
 </head>
 <body>
     
-    <form>
+    <form id="f1">
         <fieldset>
             <legend>Prueba</legend>
 
-            <p>Introduzca un numero para ver si es par.</p>
+            <p>Introduzca un numero para ver si es par. <br></p>
 
             <label>Numero</label>
-            <input type="number" name="n1">
+            <input type="text" name="n1" id="f1n1">
             <br><br>
 
             <input type="button" value="Comprobar" onclick="
@@ -26,9 +26,15 @@
                 }
             ">
 
-            <p id="r1"></p>
+            <p class='res' id="r1"></p>
         </fieldset>
     </form>
+
+    <p class="res">1</p>
+    <p class="res">2</p>
+    <p class="res">3</p>
+    <p class="res">4</p>
+    <p class="res">5</p>
 
 </body>
 </html>

@@ -20,6 +20,11 @@
             width: 80%;
             margin: auto;
         }
+        form{
+            border: 2px solid black;
+            margin: 10px;
+            padding: 5px;
+        }
     </style>
     <title>Relacion 1 - Javascript</title>
 </head>
@@ -44,6 +49,52 @@
                 ">
 
                 <p id='rx'></p>
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 6</legend>
+
+                <p>A partir de un número de días, determinar el número de años, meses y días.</p>
+
+                <label>Horas</label>
+                <input type="number" name="num1">
+                <br><br>
+                
+                <label>Minutos</label>
+                <input type="number" name="num2">
+                <br><br>
+                
+                <label>Segundos</label>
+                <input type="number" name="num3">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r6').innerHTML = segundos(parseInt(num1.value), parseInt(num2.value), parseInt(num3.value));
+                ">
+
+                <p id="r6"></p>
+
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>Ejercicio 14</legend>
+
+                <p>A partir de un número de días, determinar el número de años, meses y días.</p>
+
+                <label>Dias</label>
+                <input type="number" name="num">
+                <br><br>
+
+                <input type="button" value="Calcular" onclick="
+                    document.getElementById('r14').innerHTML = dias(parseInt(num.value));
+                ">
+
+                <p id="r14"></p>
+
             </fieldset>
         </form>
 
