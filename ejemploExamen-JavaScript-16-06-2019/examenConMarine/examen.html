@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="functions.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="chatDiv">
+        <div id="formChat">
+            <form>
+                <fieldset>
+                    <legend>Mi Chat</legend>
+
+                    <div id="usersDiv">
+                        <label for="users">Usuarios</label>
+                        <select name="users" id="users">
+                            <option value="">- selecciona -</option>
+                            <option value="marina">Marina</option>
+                            <option value="santi">Santi</option>
+                        </select>
+                        <input type="button" value="+" onclick="agregarUsuario()">
+                    </div>
+                    <br>
+                    <div id="mesj">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div id="buttons">
+                        <input type="button" value="Enviar" onclick="chat(mensaje.value, users.value)">
+                        <input type="reset" value="Cancelar">
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <div id="chat">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

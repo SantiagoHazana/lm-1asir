@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <script src="functions.js"></script>
     <title>Ejercicios DOM</title>
 </head>
 <body>
@@ -13,10 +14,10 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non facilisis mauris, eu blandit nulla. Proin porttitor, mauris vitae dignissim dapibus, nunc leo finibus turpis, a tempus eros felis at diam. Nullam posuere pulvinar rhoncus. Nullam eu condimentum risus. In hac habitasse platea dictumst. Proin sit amet est vulputate, euismod nibh id, suscipit magna. Sed feugiat vitae nunc ut fringilla. Aenean sed turpis ligula. Cras quis metus egestas, ullamcorper augue a, viverra lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec lobortis dapibus laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc et odio nunc. Aenean rhoncus lectus ac mauris imperdiet, ac faucibus purus laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dolor erat, dignissim a lacus eu, aliquam aliquet ligula.
             </p>
-            <p>
+            <p class="este">
                 Nam mollis tempor est varius volutpat. Proin sed faucibus risus. Quisque finibus ex vitae leo dictum lobortis ac sed libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque eget leo tortor. Nullam feugiat eros id massa aliquam dapibus ut vitae dolor. Quisque fringilla fringilla nisi quis euismod. Nullam ornare rutrum orci non sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam facilisis justo tempus gravida imperdiet. Donec tristique, nisl eu feugiat varius, purus est luctus neque, quis feugiat erat turpis a lectus. Fusce placerat pulvinar sapien at varius. Pellentesque dapibus justo quis pellentesque ultrices. Nulla rutrum dui in ante interdum dictum venenatis accumsan est. Curabitur at magna non lectus luctus tempor in sit amet orci.
             </p>
-            <p>
+            <p class="este">
                 Duis accumsan malesuada risus, eget maximus felis bibendum at. Cras pretium turpis libero, vitae consequat lacus pellentesque vel. Sed interdum, sapien varius finibus congue, justo leo lobortis odio, eu congue velit mi eget erat. Integer at neque in lorem dictum molestie vitae eget lectus. Donec lobortis laoreet aliquet. Cras eu augue in elit malesuada mollis at sit amet odio. Donec vehicula lacus feugiat nisl convallis, id viverra turpis aliquam. Aenean nec pellentesque leo. Suspendisse eros nisi, scelerisque eget diam id, interdum tincidunt arcu. Aliquam sed risus nec est tempor molestie. Nulla facilisi. Sed pharetra eros dui, tempus congue diam laoreet ac. Curabitur interdum porta faucibus.
             </p>
             <p>
@@ -31,8 +32,8 @@
             <a href="https://www.cyberpunk.net" target="_blank">Cyberpunk 2077</a>
             <a href="https://www.youtube.com/" target="_blank">Youtube</a>
         </div>
-        <div id="tabla">
-            <table>
+        <div id="tablaDiv">
+            <table id="tabla">
                 <tr>
                     <td>AAA</td>
                     <td>BBB</td>
@@ -67,13 +68,13 @@
         <input type="button" class="botonEj" value="1. Modificar primer parrafo" onclick="">
         <input type="button" class="botonEj" value="2. Modificar parrafos" onclick="">
         <input type="button" class="botonEj" value="3. Numero parrafos" onclick="">
-        <input type="button" class="botonEj" value="4. Agregar parrafo" onclick="">
+        <input type="button" class="botonEj" value="4. Agregar parrafo" onclick="agregarP()">
         <input type="button" class="botonEj" value="5. Modificar vinculo" onclick="">
-        <input type="button" class="botonEj" value="6. Crear parrafos" onclick="">
-        <input type="button" class="botonEj" value="7. Eliminar" onclick="">
-        <input type="button" class="botonEj" value="8. Modificar celda" onclick="">
-        <input type="button" class="botonEj" value="9. Agregar nombre" onclick="">
-        <input type="button" class="botonEj" value="10. Eliminar todos" onclick="">
+        <input type="button" class="botonEj" value="6. Crear parrafos" onclick="agregarVariosP()">
+        <input type="button" class="botonEj" value="7. Eliminar" onclick="idYEliminar()">
+        <input type="button" class="botonEj" value="8. Modificar celda" onclick="modTabla()">
+        <input type="button" class="botonEj" value="9. Agregar nombre" onclick="agregarNombre()">
+        <input type="button" class="botonEj" value="10. Eliminar todos" onclick="eliminar()">
     </div>
 </body>
 </html>
